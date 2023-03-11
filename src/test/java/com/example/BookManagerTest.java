@@ -2,9 +2,13 @@ package com.example;
 
 import com.example.model.Book;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -76,5 +80,14 @@ class BookManagerTest {
 
         booksManager.deleteBook(book.getIdentifier());
         assertEquals(0, booksManager.listBooks().size());
+    }
+
+    @Test
+    @Disabled("See FIXME")
+    // FIXME: it seems that the AccessGrant class cannot deserialize given access grant via email...
+    public void testAccessGrant() throws IOException {
+        String grant = Files.readString(Paths.get("src/test/resources/grantutester3.jsonld"));
+        var accessGrantSession = authenticator.getAccessGrantSession(grant);
+        assertTrue(accessGrantSession.getPrincipal().isPresent());
     }
 }

@@ -1,5 +1,7 @@
 package com.example;
 
+import com.inrupt.client.accessgrant.AccessGrant;
+import com.inrupt.client.accessgrant.AccessGrantSession;
 import com.inrupt.client.auth.Session;
 import com.inrupt.client.openid.OpenIdSession;
 
@@ -24,6 +26,11 @@ public class InruptAuthenticator {
 
     public Session getSession() {
         return OpenIdSession.ofClientCredentials(URI.create(issuerUrl), clientId, clientSecret, authMethod);
+    }
+
+    public Session getAccessGrantSession(String grant) {
+        var accessGrant = AccessGrant.ofAccessGrant(grant);
+        return AccessGrantSession.ofAccessGrant(getSession(), accessGrant);
     }
 
 }

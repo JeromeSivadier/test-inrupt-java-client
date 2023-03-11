@@ -1,0 +1,119 @@
+[
+  {
+    "@type": [
+      "https://www.w3.org/2018/credentials#VerifiablePresentation"
+    ],
+    "https://www.w3.org/2018/credentials#verifiableCredential": [
+      {
+        "@graph": [
+          {
+            "https://www.w3.org/2018/credentials#credentialStatus": [
+              {
+                "@id": "https://vc.inrupt.com/status/7pRv#0",
+                "https://w3id.org/vc-revocation-list-2020#revocationListCredential": [
+                  {
+                    "@id": "https://vc.inrupt.com/status/7pRv"
+                  }
+                ],
+                "https://w3id.org/vc-revocation-list-2020#revocationListIndex": [
+                  {
+                    "@value": "0"
+                  }
+                ],
+                "@type": [
+                  "https://w3id.org/vc-revocation-list-2020#RevocationList2020Status"
+                ]
+              }
+            ],
+            "https://www.w3.org/2018/credentials#credentialSubject": [
+              {
+                "@id": "https://id.inrupt.com/timea",
+                "https://w3id.org/GConsent#providedConsent": [
+                  {
+                    "https://w3id.org/GConsent#forPersonalData": [
+                      {
+                        "@id": "https://storage.inrupt.com/d2a8b8b3-1a0f-41cb-a8d1-bc93842fa00d/usabilitytesting/"
+                      }
+                    ],
+                    "https://w3id.org/GConsent#hasStatus": [
+                      {
+                        "@id": "https://w3id.org/GConsent#ConsentStatusExplicitlyGiven"
+                      }
+                    ],
+                    "https://w3id.org/GConsent#isProvidedToPerson": [
+                      {
+                        "@id": "https://id.inrupt.com/utester3"
+                      }
+                    ],
+                    "http://www.w3.org/ns/auth/acl#mode": [
+                      {
+                        "@id": "http://www.w3.org/ns/auth/acl#Read"
+                      },
+                      {
+                        "@id": "http://www.w3.org/ns/auth/acl#Write"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "@id": "https://vc.inrupt.com/vc/8272b42b-af37-4fca-8b56-5e82c9964f91",
+            "https://www.w3.org/2018/credentials#issuanceDate": [
+              {
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "@value": "2023-03-03T14:47:43.899Z"
+              }
+            ],
+            "https://www.w3.org/2018/credentials#issuer": [
+              {
+                "@id": "https://vc.inrupt.com"
+              }
+            ],
+            "https://w3id.org/security#proof": [
+              {
+                "@graph": [
+                  {
+                    "http://purl.org/dc/terms/created": [
+                      {
+                        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                        "@value": "2023-03-03T14:47:44.166Z"
+                      }
+                    ],
+                    "https://w3id.org/security#domain": [
+                      {
+                        "@value": "solid"
+                      }
+                    ],
+                    "https://w3id.org/security#proofPurpose": [
+                      {
+                        "@id": "https://w3id.org/security#assertionMethod"
+                      }
+                    ],
+                    "https://w3id.org/security#proofValue": [
+                      {
+                        "@type": "https://w3id.org/security#multibase",
+                        "@value": "z2P4SwuYWTKNvtcQB5NeQGUY9AoMeENcoaXPQQ8R3BuqKbxwRJQwt4ArnUX3DoDf33uTVz3fpcr4xhCRBztmahy1Y"
+                      }
+                    ],
+                    "@type": [
+                      "https://w3id.org/security#Ed25519Signature2020"
+                    ],
+                    "https://w3id.org/security#verificationMethod": [
+                      {
+                        "@id": "https://vc.inrupt.com/key/0c29701a-e27a-3468-9134-0af041cb6222"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "@type": [
+              "https://www.w3.org/2018/credentials#VerifiableCredential",
+              "http://www.w3.org/ns/solid/vc#SolidAccessGrant"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

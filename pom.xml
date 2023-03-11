@@ -47,6 +47,10 @@
         </dependency>
         <dependency>
             <groupId>com.inrupt</groupId>
+            <artifactId>inrupt-client-accessgrant</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.inrupt</groupId>
             <artifactId>inrupt-client-core</artifactId>
         </dependency>
         <dependency>
